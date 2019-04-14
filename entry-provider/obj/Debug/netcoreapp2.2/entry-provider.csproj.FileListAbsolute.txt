@@ -1,0 +1,14 @@
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/bin/Debug/netcoreapp2.2/entry-provider.deps.json
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/bin/Debug/netcoreapp2.2/entry-provider.runtimeconfig.json
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/bin/Debug/netcoreapp2.2/entry-provider.runtimeconfig.dev.json
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/bin/Debug/netcoreapp2.2/entry-provider.dll
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/bin/Debug/netcoreapp2.2/entry-provider.pdb
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.csprojAssemblyReference.cache
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.csproj.CoreCompileInputs.cache
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.RazorAssemblyInfo.cache
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.RazorAssemblyInfo.cs
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.AssemblyInfoInputs.cache
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.AssemblyInfo.cs
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.RazorTargetAssemblyInfo.cache
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.dll
+/Users/murrayjack/Dev/graphQL-docker-talks/entry-provider/obj/Debug/netcoreapp2.2/entry-provider.pdb
