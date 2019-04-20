@@ -5,6 +5,7 @@
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
 ## Booking Provider
+Written in dotnet 2.2
 
 ```
 $ dotnet restore
@@ -12,9 +13,14 @@ $ dotnet restore
 $ dotnet run
 ```
 
-
-
 ## Entry Provider
+Written in dotnet 2.2
+
+```
+$ dotnet restore
+
+$ dotnet run
+```
 
 
 ## graphql Server
