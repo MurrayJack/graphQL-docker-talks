@@ -10,11 +10,18 @@ namespace booking_provider.Controllers
     [ApiController]
     public class BookingController : ControllerBase
     {
-        // GET api/values
+        BookingData bookingData = new BookingData();
+
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Booking>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return bookingData.Items;
+        }
+
+        [HttpGet("{entryId}")]
+        public ActionResult<IEnumerable<Booking>> Get(int entryId)
+        {
+            return bookingData.Items.Where((e) => e.EntryId == entryId).ToList();
         }
     }
 }

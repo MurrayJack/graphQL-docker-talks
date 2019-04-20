@@ -45,12 +45,18 @@ module.exports = {
     },
 
     Entry: {
-        Booking: (global, args) => {
+        Booking: (entry) => {
             return new Promise((resolve, reject) => {
-                resolve([{
-                    Id: "123"
-
-                }])
+                request(`${providers.booking}/${entry.Id}`, { json: true }, (err, res, body) => {
+                    const entries = body.map(e => ({
+                        Id: e.id,
+                        StartDate: e.startDate,
+                        EndDate: e.endDate,
+                        Location: e.location,
+                        Room: e.room                        
+                    }));
+                    resolve(entries);
+                });
             });
         },
 

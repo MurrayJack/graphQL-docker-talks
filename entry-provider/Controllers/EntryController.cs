@@ -22,7 +22,7 @@ namespace entry_provider.Controllers
         [HttpGet("{id}")]
         public ActionResult<Entry> Get(int id)
         {
-            return data.Items.FirstOrDefault((e) => e.Id == id);
+            return data.Items.FirstOrDefault(e => e.Id == id);
         }
 
         [HttpGet("{offSet}/{limit}")]
