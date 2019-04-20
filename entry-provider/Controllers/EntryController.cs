@@ -8,7 +8,7 @@ namespace entry_provider.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class EntryController : ControllerBase
     {
         // GET api/values
         [HttpGet]
