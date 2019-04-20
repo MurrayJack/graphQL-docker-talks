@@ -4,7 +4,7 @@ const request = require('request');
 
 module.exports = {
     Query: {
-        allBookings: (global, args) => {
+        allBookings: () => {
             return new Promise((resolve, reject) => {
                 request(providers.booking, { json: true }, (err, res, body) => {
                     const entries = body.map(e => ({
