@@ -1,9 +1,10 @@
 module.exports = `
 type Feature {
-    Bookings: Boolean
+    DoYouEven_Bookings: Boolean
+    DoYouEven_Entries: Boolean
 }
 
 type Query {
-    features: Feature!
+    feature: Feature!
 }
 `;

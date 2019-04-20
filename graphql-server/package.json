@@ -17,6 +17,7 @@
     "lodash": "^4.17.11",
     "merge-graphql-schemas": "^1.5.8",
     "opn": "^6.0.0",
+    "request": "^2.88.0",
     "uuid": "^3.3.2"
   }
 }

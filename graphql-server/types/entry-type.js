@@ -3,7 +3,6 @@ type Entry {
     Id: ID
     NameFirst: String
     NameLast: String
-    DOB: String
 
     Booking: [Booking]
 }
