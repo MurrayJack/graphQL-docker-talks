@@ -1,0 +1,28 @@
+{
+  "name": "graphql-docker-talks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "cd graphql-server && npm start",
+
+    "build": "npm run build:entry && npm run publish:entry && npm run build:booking && npm run publish:booking",
+
+    "build:entry": "cd entry-provider && docker build -t entry-provider .",
+    "publish:entry": "cd entry-provider && docker push entry-provider",
+
+    "build:booking": "cd booking-provider && docker build -t booking-provider .",
+    "publish:booking": "cd booking-provider && docker push booking-provider"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://MurrayJack@github.com/MurrayJack/graphQL-docker-talks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MurrayJack/graphQL-docker-talks/issues"
+  },
+  "homepage": "https://github.com/MurrayJack/graphQL-docker-talks#readme"
+}
