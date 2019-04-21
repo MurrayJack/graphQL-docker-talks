@@ -1,23 +1,9 @@
-const providers = require("../providers");
-const _ = require("lodash");
-const request = require('request');
+const providers = require("../booking-provider");
 
 module.exports = {
     Query: {
-        allBookings: (global, args) => {
-            return new Promise((resolve, reject) => {
-                request(providers.booking, { json: true }, (err, res, body) => {
-                    const entries = body.map(e => ({
-                        Id: e.id,
-                        StartDate: e.startDate,
-                        EndDate: e.endDate,
-                        Location: e.location,
-                        Room: e.room                        
-                    }));
-                    resolve(entries);
-                });
-            });
+        allBookings: async () => {
+            return await providers.getAllBookingData();
         },
-
-    }
+    },
 }
