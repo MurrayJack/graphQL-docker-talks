@@ -1,64 +1,16 @@
-const providers = require("../providers");
-const _ = require("lodash");
-const request = require('request');
+const bookingProvider = require("../booking-provider");
+const entryProvider = require("../entry-provider");
 
 module.exports = {
     Query: {
-        allEntries: () => {
-            return new Promise((resolve) => {
-                request(providers.entry, { json: true }, (err, res, body) => {
-                    const entries = body.map(e => ({
-                        Id: e.id,
-                        NameFirst: e.nameFirst,
-                        NameLast: e.nameLast,
-                    }));
-                    resolve(entries);
-                });
-            });
-        },
+        allEntries: async () => await entryProvider.getAllEntries(),
 
-        entry: (_, args) => {
-            return new Promise((resolve) => {
-                request(`${providers.entry}/${args.Id}`, { json: true }, (err, res, body) => {
-                    const entries = {
-                        Id: body.id,
-                        NameFirst: body.nameFirst,
-                        NameLast: body.nameLast,
-                    };
-                    resolve(entries);
-                });
-            });
-        },
+        entry: async (_, { Id }) => await entryProvider.getEntry(Id),
 
-        entries: (_, args) => {
-            return new Promise((resolve, reject) => {
-                request(`${providers.entry}/${args.offSet}/${args.limit}`, { json: true }, (err, res, body) => {
-                    const entries = body.map(e => ({
-                        Id: e.id,
-                        NameFirst: e.nameFirst,
-                        NameLast: e.nameLast,
-                    }));
-                    resolve(entries);
-                });
-            });
-        },
+        entries: async (_, { offSet, limit }) => await entryProvider.getEntries(offSet, limit)
     },
 
     Entry: {
-        Booking: (entry) => {
-            return new Promise((resolve, reject) => {
-                request(`${providers.booking}/${entry.Id}`, { json: true }, (err, res, body) => {
-                    const entries = body.map(e => ({
-                        Id: e.id,
-                        StartDate: e.startDate,
-                        EndDate: e.endDate,
-                        Location: e.location,
-                        Room: e.room                        
-                    }));
-                    resolve(entries);
-                });
-            });
-        },
-
+        Booking: async ({ Id }) => await bookingProvider.getEntryBookings(Id)
     }
 }
