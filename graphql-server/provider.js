@@ -8,4 +8,12 @@ async function get(url) {
     });
 }
 
-module.exports = get;
+async function post(url) {
+    return new Promise((resolve) => {
+        request.post(url, { json: true }, (err, res, body) => {
+            resolve(body)
+        });
+    });
+}
+
+module.exports = { get, post };

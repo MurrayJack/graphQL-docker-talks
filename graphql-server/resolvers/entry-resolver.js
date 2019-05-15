@@ -10,6 +10,10 @@ module.exports = {
         entries: async (_, { offSet, limit }) => await entryProvider.getEntries(offSet, limit)
     },
 
+    Mutation: {
+        updateEntryName: async (_, { params }) => await entryProvider.updateEntryName(params)
+    },
+
     Entry: {
         Booking: async ({ Id }) => await bookingProvider.getEntryBookings(Id)
     }

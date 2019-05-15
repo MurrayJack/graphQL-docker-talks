@@ -10,7 +10,8 @@ namespace entry_provider.Controllers
     [ApiController]
     public class EntryController : ControllerBase
     {
-        Data data = new Data();
+        public static Data data = new Data();
+
 
         // GET api/values
         [HttpGet]
@@ -29,6 +30,22 @@ namespace entry_provider.Controllers
         public ActionResult<IEnumerable<Entry>> Get(int offSet, int limit)
         {
             return data.Items.GetRange(offSet, limit);
+        }
+
+        [HttpPost("{id}")]
+        public ActionResult<bool> Post(int id, [FromQuery(Name = "NameFirst")] string NameFirst, [FromQuery(Name = "NameLast")] string NameLast)
+        {
+            var item = data.Items.FirstOrDefault(e => e.Id == id);
+
+            if (item != null)
+            {
+                item.NameFirst = NameFirst;
+                item.NameLast = NameLast;
+
+                return true;
+            }
+
+            return false;
         }
     }
 }

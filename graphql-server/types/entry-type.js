@@ -18,4 +18,14 @@ type Query {
     "Get a specific Entry"
     entry(Id: ID): Entry!
 }
+
+input EntryInput {
+    Id: ID
+    NameFirst: String
+    NameLast: String
+}
+
+type Mutation {
+    updateEntryName(params: EntryInput): Boolean
+}
 `;

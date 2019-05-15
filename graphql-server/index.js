@@ -21,7 +21,7 @@ app.use('/', graphqlHTTP({
     graphiql: true,
 }));
 
-const port = 3000;
+const port = 2000;
 
 app.listen(port);
 console.log(`Running on: http://localhost:${port}/`);
