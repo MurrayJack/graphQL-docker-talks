@@ -11,5 +11,4 @@ type Booking {
 type Query {
     allBookings: [Booking]!
 }
-
 `;

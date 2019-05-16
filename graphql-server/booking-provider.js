@@ -1,4 +1,4 @@
-const get = require("./provider");
+const {get} = require("./provider");
 
 const bookingUri = 'http://localhost:5020/api/booking';
 

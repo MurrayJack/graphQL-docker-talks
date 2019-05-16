@@ -6,6 +6,11 @@ import EntrySelectorRenderProps from "./1.EntrySelector/EntrySelectorRenderProps
 import EntrySelectorHOC from "./2.EntrySelector/EntrySelectorHOC";
 import EntrySelectorHooks from "./3.EntrySelector/EntrySelectorHooks";
 import EntryEditorHooks from "./EntryEditor/EntryEditor";
+import Grid from "./Grid/Grid";
+import StarRez from "./__Components/StarRez";
+import AllTogether from "./AllTogether/AllTogether";
+
+const image = require("./__Assets/Screen.png")
 
 const client = new ApolloClient({
     link: new HttpLink({
@@ -18,33 +23,37 @@ export const GraphQLContext = createContext<any>(undefined, undefined);
 
 const App: React.FC = () => {
     return (
-        <ApolloProvider client={client}>
-            <GraphQLContext.Provider value={client}>
+        // <img src={image} />
 
-                {/* Picture ! */}
+        <StarRez>
 
-                {/* Examples  */}
+            <ApolloProvider client={client}>
+                <GraphQLContext.Provider value={client}>
+                    {/* <div style={{ padding: "50px" }} > */}
+                        {/* Examples  */}
 
-                {/*  */}
-                <EntrySelectorRenderProps />
+                        {/*  */}
+                        {/* <EntrySelectorRenderProps /> */}
 
-                {/* HOC version of the entry selector */}
-                <EntrySelectorHOC />
+                        {/* HOC version of the entry selector */}
+                        {/* <EntrySelectorHOC /> */}
 
-                {/* Hooks example */}
-                <EntrySelectorHooks />
+                        {/* Hooks example */}
+                        {/* <EntrySelectorHooks /> */}
 
-                {/* Mutation */}
-                <EntryEditorHooks EntryId={1} />
+                        {/* Mutation */}
+                        {/* <EntryEditorHooks EntryId={1} /> */}
 
-                {/* Grids */}
+                        {/* Grids */}
+                        {/* <Grid EntryId={1} /> */}
+                    {/* </div> */}
 
-                {/* All In */}
+                    {/* All In */}
+                    <AllTogether />
 
-
-                
-            </GraphQLContext.Provider>
-        </ApolloProvider>
+                </GraphQLContext.Provider>
+            </ApolloProvider>
+        </StarRez>
     );
 }
 
